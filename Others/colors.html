@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HTMl colors</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: gray;
+        }
+        
+        .color_viewer {
+            border: 2px solid antiquewhite;
+            width: 60%;
+            height: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div onmouseover="getCursorPosition(event)" class="color_viewer">
+
+    </div>
+
+    <script>
+        function rgb(r, g, b) {
+            return "rgb(" + r + "," + g + "," + b + ")";
+        }
+        var pos1, pos2, pos3
+
+        function getCursorPosition(event) {
+            pos1 = (Math.ceil(Math.random() * 255))
+            pos2 = (Math.ceil(Math.random() * 255))
+            pos3 = (Math.ceil(Math.random() * 255))
+
+
+            const display = document.querySelector(".color_viewer")
+            display.style.backgroundColor = rgb(pos1, pos2, pos3)
+
+        }
+
+
+
+
+
+
+
+        // display.style.backgroundColor = "rgb(${colorCombination1},50,70)"
+    </script>
+</body>
+
+</html>

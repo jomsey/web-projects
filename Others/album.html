@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: black;
+            overflow: hidden;
+        }
+        
+        h1 {
+            color: aqua;
+            font-size: 50px;
+            text-shadow: 0 0 20px white;
+            position: relative;
+            text-align: center;
+            bottom: 100%;
+            left: -20px;
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+            transform: rotateY(50deg);
+        }
+        
+        .photo {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            margin: 100px;
+            -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004, aqua);
+        }
+        
+        .container:hover {
+            animation-play-state: paused;
+            cursor: pointer;
+        }
+        
+        .main {
+            transform-style: preserve-3d;
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .container {
+            width: 100%;
+            height: 100%;
+            perspective-origin: 0px;
+            transition: 5s;
+            animation: animate 10s linear infinite;
+            transform-style: preserve-3d;
+        }
+        
+        .photo:nth-child(1) {
+            background: url(photos/p1.jpeg);
+            background-size: cover;
+            transform: rotateY(40deg) translateZ(350px) translateY(-5px);
+        }
+        
+        .photo:nth-child(2) {
+            background: url(photos/p2.jpg);
+            background-size: cover;
+            transform: rotateY(80deg) translateZ(350px) translateY(-10px);
+        }
+        
+        .photo:nth-child(3) {
+            background: url(photos/p3.jpg);
+            background-size: cover;
+            transform: rotateY(120deg) translateZ(350px) translateY(-15px);
+        }
+        
+        .photo:nth-child(4) {
+            background: url(photos/p4.jpeg);
+            background-size: cover;
+            transform: rotateY(160deg) translateZ(350px) translateY(-20px);
+        }
+        
+        .photo:nth-child(5) {
+            background: url(photos/p5.jpg);
+            background-size: cover;
+            transform: rotateY(200deg) translateZ(350px) translateY(-25px);
+        }
+        
+        .photo:nth-child(6) {
+            background: url(photos/p6.jpg);
+            background-size: cover;
+            transform: rotateY(240deg) translateZ(350px) translateY(-30px);
+        }
+        
+        .photo:nth-child(7) {
+            background: url(photos/p7.jpg);
+            background-size: cover;
+            transform: rotateY(280deg) translateZ(350px) translateY(-35px);
+        }
+        
+        .photo:nth-child(8) {
+            background: url(photos/p8.jpg);
+            background-size: cover;
+            transform: rotateY(320deg) translateZ(350px) translateY(-40px);
+        }
+        
+        .photo:nth-child(9) {
+            background: url(photos/p9.jpg);
+            background-size: cover;
+            transform: rotateY(360deg) translateZ(350px) translateY(-45px);
+        }
+        
+        @keyframes animate {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="container">
+
+            <div id="1" class="photo"></div>
+            <div id="2" class="photo"></div>
+            <div id="3" class="photo"></div>
+            <div id="4" class="photo"></div>
+            <div id="5" class="photo"></div>
+            <div id="6" class="photo"></div>
+            <div id="7" class="photo"></div>
+            <div id="8" class="photo"></div>
+            <div id="9" class="photo"></div>
+
+
+
+        </div>
+        <h1>created by Jose</h1>
+
+    </div>
+
+</body>
+
+</html>

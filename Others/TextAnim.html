@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TextAnimation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            overflow: hidden;
+            background: rgb(19, 17, 17);
+        }
+        
+        h1 {
+            color: transparent;
+            font-size: 8em;
+            text-align: center;
+            height: 100%;
+            position: absolute;
+            -webkit-text-stroke: .5px aliceblue;
+        }
+        
+        .container {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 300px;
+            transform-style: preserve-3d;
+            background-color: rgb(19, 17, 17);
+        }
+        
+        h1:nth-child(1) {
+            animation: x 5s ease-in-out;
+            color: aliceblue;
+            clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+        }
+        
+        h1:nth-child(2) {
+            animation: y 5s;
+        }
+        
+        @keyframes x {
+            0% {
+                transform: rotateY(180deg) rotateX(60deg) translateX(500px) translateZ(100px);
+            }
+            100% {}
+        }
+        
+        @keyframes y {
+            0% {
+                transform: rotateY(-90deg) rotateX(-60deg) translateX(-500px) translateZ(-00px);
+            }
+        }
+    </style>
+</head>
+
+<div class="container">
+    <h1>WELCOME TO WAKANDA</h1>
+    <h1>WELCOME TO WAKANDA</h1>
+
+</div>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>learn</title>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="description" content="Hello world">
+    <meta name="keywords" content="we ">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <canvas width="700" height="500" style="border: 2px solid magenta;"></canvas>
+    <script>
+        let cx = document.querySelector("canvas").getContext("2d");
+        cx.beginPath();
+        cx.moveTo(20, 20)
+        cx.lineTo(30, 200)
+        cx.lineTo(50, 300)
+        cx.lineTo(50, 20)
+        cx.fill()
+    </script>
+</body>
+
+</html>

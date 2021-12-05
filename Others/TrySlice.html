@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Slice Photo Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * {
+            margin: 0;
+        }
+        
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        #template1,
+        #template2 {
+            width: 600px;
+            height: 400px;
+            transform-style: preserve-3d;
+        }
+        
+        #template1 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto;
+            perspective: 600px;
+        }
+        
+        .section {
+            height: 100%;
+            background: url(photos/Yes-sign.jpg);
+            background-repeat: no-repeat;
+            backface-visibility: hidden;
+            background-size: 300%;
+        }
+        /* ******************************Template 1 **********************************************************
+        ******************************************************************************************************/
+        
+        #template1 .section1 {
+            background-position: 0 0;
+            animation: section1 2s infinite;
+        }
+        
+        #template1 .section2 {
+            background-position: -200px 0;
+            animation: section2 2s infinite;
+        }
+        
+        #template1 .section3 {
+            background-position: -400px 0;
+            animation: section3 2s infinite;
+        }
+        /* ******************************Template tw0 **********************************************************
+        ********************************************************************************************************/
+        
+        #template2 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto;
+        }
+        
+        #template2 .section1 {
+            background-position: 0 -5px;
+        }
+        
+        #template2 .section2 {
+            background-position: -200px -5px;
+        }
+        
+        #template2 .section3 {
+            background-position: -400px -5px;
+        }
+        
+        #template2 .section4 {
+            background-position: 0 -205px;
+        }
+        
+        #template2 .section5 {
+            background-position: -200px -205px;
+        }
+        
+        #template2 .section6 {
+            background-position: -400px -205px;
+        }
+        /*******************************Template one  animations**********************************************************
+        *****************************************************************************************************************/
+        
+        @keyframes section1 {
+            0% {
+                transform: rotateY(180deg) translateZ(-50px);
+            }
+        }
+        
+        @keyframes section2 {
+            0% {
+                transform: rotateX(180deg) translateZ(50px);
+            }
+        }
+        
+        @keyframes section3 {
+            0% {
+                transform: rotateY(180deg) translateZ(100px);
+            }
+        }
+        /* ******************************Template two animations **********************************************************
+        ********************************************************************************************************************/
+        
+        @keyframes T2section1 {
+            0% {
+                transform: rotate(180deg);
+            }
+        }
+        
+        @keyframes T2section2 {
+            0% {
+                transform: rotateX(-180deg);
+            }
+        }
+        
+        @keyframes T2section3 {
+            0% {
+                transform: rotateY(-180deg)
+            }
+        }
+        
+        @keyframes T2section4 {
+            0% {
+                opacity: 0;
+                transform: translateY(50px)
+            }
+        }
+        
+        @keyframes T2section5 {
+            0% {
+                transform: rotateX(-180deg)
+            }
+        }
+        
+        @keyframes T2section6 {
+            0% {
+                transform: translate(-50px)
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="template1" class="photo">
+            <div class="section section1"></div>
+            <div class="section section2"></div>
+            <div class="section section3"></div>
+        </div>
+
+
+        <div id="template2" class="photo">
+            <div class="section section1"></div>
+            <div class="section section2"></div>
+            <div class="section section3"></div>
+            <div class="section section4"></div>
+            <div class="section section5"></div>
+            <div class="section section6"></div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

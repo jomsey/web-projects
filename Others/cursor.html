@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Customized cursor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body,
+        html {
+            background: black;
+            color: white;
+            cursor: none;
+        }
+        
+        #cursor {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            mix-blend-mode: difference;
+        }
+        
+        #text {
+            width: 60%;
+            position: absolute;
+            font-family: cursive;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 200px;
+            text-align: center;
+        }
+        
+        h2 {
+            position: relative;
+            bottom: 65%;
+            font-size: 100px;
+            text-shadow: 0 0 20px rgb(255, 50, 245);
+            ;
+        }
+        
+        h3 {
+            position: relative;
+            bottom: 100%;
+            color: rgb(255, 50, 245);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="text">
+        <h2>Hello world</h2>
+        <h3>created by Jose</h3>
+    </div>
+    <div id="cursor">
+
+    </div>
+    <script>
+        const cursor = document.getElementById("cursor")
+        document.addEventListener("mousemove", function(event) {
+
+            cursor.style.top = event.pageY + "px"
+            cursor.style.left = event.pageX + "px"
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The cube</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: rgb(37, 34, 34);
+            text-align: center;
+            color: aqua;
+            font-family: cursive;
+            text-shadow: 0 0 20px rgb(46, 219, 219);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .cube-container {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .cube {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            animation: animate 20s ease infinite;
+        }
+        
+        .face {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        
+        h1 {
+            transform: translateZ(150px) translateY(-50%);
+            border: 2px solid aqua;
+            box-shadow: 0 0 10px aqua;
+            border-radius: 30px;
+            position: relative;
+            top: 50%;
+        }
+        
+        .face1 {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        
+        .face2 {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        
+        .face3 {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        
+        .face4 {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        
+        .face5 {
+            transform: rotateY(180deg) translateZ(100px);
+        }
+        
+        .face6 {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+        
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+            40% {
+                transform: rotateX(360deg) rotateY(90deg) rotateZ(45deg);
+            }
+            80% {
+                transform: rotateY(-360deg) rotateX(90deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cube-container">
+
+        <div class="cube">
+
+            <div class="face face1"><img src="photos/p4.jpeg" alt=""></div>
+            <div class="face face2"><img src="photos/10.jpg" alt=""></div>
+            <div class="face face3"><img src="photos/p8.jpg" alt=""></div>
+            <div class="face face4"><img src="photos/p7.jpg" alt=""></div>
+            <div class="face face5"><img src="photos/Yes-sign.jpg" alt=""></div>
+            <div class="face face6"><img src="photos/p6.jpg" alt=""></div>
+            <h1>Created By Jose</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>

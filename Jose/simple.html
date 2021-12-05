@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jose World</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style type="text/css">
+        html,
+        body {
+            height: 100vh;
+            width: 100%;
+        }
+        
+        * {
+            text-align: center;
+            margin: 0px auto;
+            padding: 0px;
+            box-sizing: content-box;
+        }
+        
+        #main_container {
+            height: 100vh;
+        }
+        
+        #avatar img {
+            width: 150px;
+            border-bottom: 2px solid rgba(20%, 50%, 70%, .5);
+            border-bottom-left-radius: 150px;
+            border-bottom-right-radius: 150px;
+        }
+        
+        #avatar-bg {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: rgba(20%, 50%, 70%, .5);
+            box-shadow: 4px 4px 10px #aeafad;
+            margin-bottom: 10px;
+            transition: all 3s ease-in;
+            animation-name: do;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+        }
+        
+        @keyframes do {
+            0% {
+                transform: rotateX(90deg);
+            }
+            50% {
+                transform: rotateY(90deg);
+            }
+        }
+        
+        #Container {
+            background: #fff;
+            box-shadow: 2px 2px 10px #000;
+            width: 70%;
+            margin-top: 30px;
+            padding: 10px;
+        }
+        
+        #abt-me {
+            padding: 20px;
+            width: 70%;
+        }
+        
+        p {
+            margin-top: 5px;
+            font-family: cursive;
+            color: rgb(0, 100, 255);
+        }
+        
+        #title {
+            width: 60%;
+            font-family: serif;
+            color: rgb(30, 50, 100);
+            border-radius: 20px;
+            border-bottom: 2px solid rgb(100, 200, 200);
+            border-left: 2px solid rgb(100, 200, 200);
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 500px) {
+            #avatar img {
+                width: 100px;
+            }
+            #avatar-bg {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="Container">
+        <h1 id="title">Muwanguzi Joseph</h1>
+
+        <div id="avatar-bg">
+            <div id="avatar">
+                <img src="C:\Users\s\Desktop\Camera\C360_2019-04-19-22-51-06-980.jpg" alt="my avartar"></div>
+        </div>
+
+        <div id="abt-me">
+
+            <p>
+                There is nothing much about me,but I believe that there is something special about me.
+            </p>
+
+            <p>
+                My name is Muwanguzi Joseph though many call me by different names,the fact remains I still remain the same.
+            </p>
+
+            <p>
+                I believe in nothing other than something.That something gives me courage to keep on going even when don't feel like.I don't also believe in dreams but do in realities.
+            </p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

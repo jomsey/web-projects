@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>slideshow</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <style>
+        #display {
+            width: 80%;
+            height: fit-content;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(17, 16, 16);
+        }
+        
+        .slide-show {
+            width: 100%;
+            height: 350px;
+        }
+        
+        img {
+            animation-name: animate;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+        }
+        
+        @keyframes animate {
+            0% {
+                opacity: .2;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        #slide-description {
+            width: 100%;
+            height: 10%;
+        }
+        
+        #slide-description h3 {
+            color: aliceblue;
+            font-size: 15px;
+            text-align: center;
+            font-weight: 10;
+            letter-spacing: .09em;
+        }
+        
+        #fragments {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        .photo {
+            width: inherit;
+            filter: contrast(40%);
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .photo:hover {
+            filter: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="display">
+        <div class="slide-show"><img id="slide-image" src="/photos/p1.jpeg" alt=""></div>
+        <div id="slide-description">
+            <h3 id="desc">photo description here</h3>
+        </div>
+        <div id="fragments">
+            <div class="photo"><img class="image" src="/photos/p1.jpeg" alt=""></div>
+            <div class="photo"><img class="image" src="/photos/p3.jpg" alt=""></div>
+            <div class="photo"><img class="image" src="/photos/p4.jpeg" alt=""></div>
+            <div class="photo"><img class="image" src="/photos/p7.jpg" alt=""></div>
+            <div class="photo"><img class="image" src="/photos/p8.jpg" alt=""></div>
+            <div class="photo"><img class="image" src="/photos/p9.jpg" alt=""></div>
+        </div>
+
+    </div>
+
+    <script>
+        let photos = document.getElementsByClassName('image')
+        let slide_image = document.getElementById('slide-image')
+        let desc = document.getElementById('desc')
+
+        let photo_descriptions = [
+            "Bird visiting flower",
+            "Swimming goose",
+            "Road leading somewhere",
+            "Having a pic for the city",
+            "Balloons in air",
+            "Lady taking a selfie"
+        ]
+
+        for (let x = 0; x < photos.length; x++) {
+            photos[x].addEventListener("click", function() {
+                slide_image.src = photos[x].src
+                desc.innerText = photo_descriptions[x + 1]
+            })
+
+        }
+    </script>
+</body>
+
+</html>
