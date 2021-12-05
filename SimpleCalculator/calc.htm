@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Calculator</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="calc.css">
+</head>
+
+<body>
+    <div id="frame">
+
+        <input type="text" id="display">
+        <div id="powerBtns">
+            <div class="power" id="on">
+                <p>ON</p>
+            </div>
+            <div class="power" id="off">
+                <p>OFF</p>
+            </div>
+        </div>
+
+        <div id="key-pad">
+
+            <div id="topBtns">
+                <button class="top">sin</button>
+                <button class="top">sin-</button>
+                <button class="top">cos</button>
+                <button class="top">cos-</button>
+                <button class="top">tan</button>
+                <button class="top">tan-</button>
+                <button class="top">√</button>
+                <button class="top">!</button>
+                <button class="top">%</button>
+                <button class="top">log</button>
+                <button class="top">e</button>
+                <button class="top"></button>
+                <button class="top"></button>
+                <button class="top"></button>
+            </div>
+
+            <div id="main-pad">
+
+                <div id="num-pad">
+                    <button class="numBTn" value="9">9</button>
+                    <button class="numBTn" value="8">8</button>
+                    <button class="numBTn" value="7">7</button>
+                    <button class="numBTn" value="6">6</button>
+                    <button class="numBTn" value="5">5</button>
+                    <button class="numBTn" value="4">4</button>
+                    <button class="numBTn" value="3">3</button>
+                    <button class="numBTn" value="2">2</button>
+                    <button class="numBTn" value="1">1</button>
+                    <button id="equal" value="=">=</button>
+                    <button class="numBTn" value="0">0</button>
+                </div>
+
+                <div id="operation-pad">
+                    <button id="delete" class="oppBTn" type="button" style="font-size: 16px;" value="DEL">DEL</button>
+                    <button type="button" value="+" class="oppBTn">+</button>
+                    <button type="button" value="-" class="oppBTn">-</button>
+                    <button type="button" value="*" class="oppBTn">*</button>
+                    <button type="button" value="/" class="oppBTn">/</button>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <script src="calc.js">
+    </script>
+    <noscript>
+            <p>please enable javascript in your browser</p>
+        </noscript>
+
+</body>
+
+</html>
