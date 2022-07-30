@@ -1,0 +1,276 @@
+:root {
+    --primary: rgb(36, 35, 35);
+    --secondary: rgb(53, 243, 234);
+    --tertiary: rgb(46, 45, 45);
+    --light: rgb(255, 255, 255);
+    --gray: gray;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: cadetblue;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+p {
+    font-size: 14px;
+}
+
+main {
+    width: 85vw !important;
+    margin: 20px auto;
+}
+
+.resume-container {
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+}
+
+.resume-container .first {
+    display: inherit;
+    flex-direction: column;
+    max-width: 400px;
+    min-width: 300px;
+    background-color: var(--primary);
+    padding: 20px;
+    align-items: center;
+    color: var(--light);
+}
+
+.resume-container section:nth-child(2) {
+    flex-grow: 2;
+    min-width: 360px;
+    background-color: var(--light);
+    overflow: hidden;
+}
+
+.resume-container section:nth-child(1) .avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: var(--light);
+    overflow: hidden;
+    border: 1px solid darkcyan;
+    box-shadow: 3px 3px 20px darkcyan;
+    margin: 15px 0 20px 0;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.block {
+    position: relative;
+}
+
+.resume-container .title {
+    display: flex;
+    width: 200px;
+    margin: 20px 0;
+}
+
+.resume-container .title h2 {
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.resume-container h3 {
+    font-size: 15px;
+}
+
+.resume-container .title svg {
+    color: var(--secondary);
+    width: 30px;
+    height: 30px;
+    align-self: center;
+}
+
+.resume-container section:nth-child(2) .title svg {
+    color: var(--primary);
+}
+
+.time-line-bar {
+    position: relative;
+    left: 15px;
+    padding-left: 20px;
+}
+
+.resume-container section:nth-child(1) .time-line-bar {
+    border-left: 2px solid var(--secondary);
+}
+
+.resume-container section:nth-child(2) .time-line-bar {
+    border-left: 2px solid var(--primary);
+}
+
+.time-line-item {
+    margin: 10px 0;
+}
+
+.time-line-item span {
+    font-size: 15px;
+    color: var(--gray);
+}
+
+.time-line-item * {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    /* Remove default bullets */
+}
+
+ul li {
+    position: relative;
+    left: -20px;
+}
+
+.resume-container ul li::before {
+    content: "\2022";
+    color: var(--secondary);
+    font-size: 40px;
+    position: absolute;
+    left: -48px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.resume-container section:nth-child(1) ul li::before {
+    color: var(--secondary);
+}
+
+.resume-container section:nth-child(2) ul li::before {
+    color: var(--primary);
+}
+
+.resume-container section:nth-child(1) .progress {
+    width: 100%;
+    height: 4px;
+    margin: 3px 0;
+    background-color: var(--gray);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress .meter {
+    width: 70%;
+    height: 100%;
+    background-color: var(--secondary);
+}
+
+.resume-container section:nth-child(2) {
+    padding: 36px 60px;
+}
+
+.resume-container section:nth-child(2) .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.resume-container section:nth-child(2) .head * {
+    margin: 0;
+}
+
+.resume-container section:nth-child(2) .head .group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 35px;
+}
+
+.resume-container section:nth-child(2) .circle {
+    width: 200px;
+    height: 200px;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.resume-container section:nth-child(2) .group h2 {
+    font-variant: small-caps;
+    letter-spacing: 2.8px;
+    color: var(--gray);
+    text-align: center;
+}
+
+.resume-container section:nth-child(2) .group .prof {
+    display: flex;
+    align-items: center;
+}
+
+.resume-container section:nth-child(2) .group .line {
+    width: 150px;
+    height: 2px;
+    background-color: var(--primary);
+    margin: 0 10px;
+}
+
+.resume-container section:nth-child(2) .group h1 {
+    font-family: cursive;
+    font-weight: 700;
+    font-size: 50px;
+    padding: 20px;
+    letter-spacing: 2.5px;
+}
+
+.time-line-item small strong {
+    color: darkcyan;
+}
+
+.education h3 {
+    font-weight: 200;
+    color: darkcyan;
+    font-size: 14px;
+}
+
+.education .year {
+    font-size: 10px;
+}
+
+.profile p {
+    margin: 10px 0;
+}
+
+footer {
+    width: 100%;
+}
+
+footer small {
+    position: relative;
+    left: 50%;
+    color: #fff;
+}
+
+@media only screen and (max-width: 400px) {
+    .resume-container section:nth-child(2) .circle {
+        width: 150px;
+        height: 150px;
+    }
+    .resume-container section:nth-child(2) .group h2 {
+        letter-spacing: 2px;
+        font-size: 18px;
+    }
+    .resume-container section:nth-child(2) .group .line {
+        width: 100px;
+    }
+    .resume-container section:nth-child(2) .group h1 {
+        font-size: 40px;
+    }
+}
